@@ -32,4 +32,4 @@ jobs:
             git add update-trigger.txt
           fi
           git commit -m "Update frontend submodule to latest commit" || echo "Nothing to commit"
-          git push origin main
+          git push origin master
