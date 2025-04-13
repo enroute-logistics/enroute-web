@@ -10,6 +10,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import MapIcon from '@mui/icons-material/Map';
 import PersonIcon from '@mui/icons-material/Person';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
 import { sessionActions } from '../../store';
 import { useTranslation } from './LocalizationProvider';
@@ -110,6 +111,7 @@ const BottomMenu = () => {
           )}
           value="map"
         />
+        <BottomNavigationAction label={t('vehicleTitle')} icon={<LocalShippingIcon />} value="devices" />
         {!disableReports && (
           <BottomNavigationAction label={t('reportTitle')} icon={<DescriptionIcon />} value="reports" />
         )}

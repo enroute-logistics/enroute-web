@@ -181,7 +181,7 @@ const PreferencesPage = () => {
                     onChange={(e) => setAttributes({ ...attributes, mapLiveRoutes: e.target.value })}
                   >
                     <MenuItem value="none">{t('sharedDisabled')}</MenuItem>
-                    <MenuItem value="selected">{t('deviceSelected')}</MenuItem>
+                    <MenuItem value="selected">{t('vehicleSelected')}</MenuItem>
                     <MenuItem value="all">{t('notificationAlways')}</MenuItem>
                   </Select>
                 </FormControl>
@@ -193,7 +193,7 @@ const PreferencesPage = () => {
                     onChange={(e) => setAttributes({ ...attributes, mapDirection: e.target.value })}
                   >
                     <MenuItem value="none">{t('sharedDisabled')}</MenuItem>
-                    <MenuItem value="selected">{t('deviceSelected')}</MenuItem>
+                    <MenuItem value="selected">{t('vehicleSelected')}</MenuItem>
                     <MenuItem value="all">{t('notificationAlways')}</MenuItem>
                   </Select>
                 </FormControl>
@@ -240,7 +240,7 @@ const PreferencesPage = () => {
             <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="subtitle1">
-                  {t('deviceTitle')}
+                  {t('vehicleTitle')}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails className={classes.details}>
@@ -249,14 +249,14 @@ const PreferencesPage = () => {
                   onChange={(e) => setAttributes({ ...attributes, devicePrimary: e.target.value })}
                   data={deviceFields}
                   titleGetter={(it) => t(it.name)}
-                  label={t('devicePrimaryInfo')}
+                  label={t('vehiclePrimaryInfo')}
                 />
                 <SelectField
                   value={attributes.deviceSecondary}
                   onChange={(e) => setAttributes({ ...attributes, deviceSecondary: e.target.value })}
                   data={deviceFields}
                   titleGetter={(it) => t(it.name)}
-                  label={t('deviceSecondaryInfo')}
+                  label={t('vehicleSecondaryInfo')}
                 />
               </AccordionDetails>
             </Accordion>

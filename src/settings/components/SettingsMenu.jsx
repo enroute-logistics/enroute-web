@@ -68,7 +68,7 @@ const SettingsMenu = () => {
               selected={location.pathname === `/settings/user/${userId}`}
             />
             <MenuItem
-              title={t('deviceTitle')}
+              title={t('vehicleTitle')}
               link="/settings/devices"
               icon={<SmartphoneIcon />}
               selected={location.pathname.startsWith('/settings/device')}

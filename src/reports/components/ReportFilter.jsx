@@ -95,7 +95,7 @@ const ReportFilter = ({
       {!ignoreDevice && (
         <div className={classes.filterItem}>
           <SelectField
-            label={t(multiDevice ? 'deviceTitle' : 'reportDevice')}
+            label={t(multiDevice ? 'vehicleTitle' : 'reportDevice')}
             data={Object.values(devices).sort((a, b) => a.name.localeCompare(b.name))}
             value={multiDevice ? deviceIds : deviceId}
             onChange={(e) => dispatch(multiDevice ? devicesActions.selectIds(e.target.value) : devicesActions.selectId(e.target.value))}

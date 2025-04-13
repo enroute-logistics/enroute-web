@@ -5,6 +5,7 @@ import { Paper } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import useQuery from '../common/util/useQuery';
 import { useDispatch, useSelector } from 'react-redux';
 import DeviceList from './DeviceList';
 import BottomMenu from '../common/components/BottomMenu';
@@ -46,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     pointerEvents: 'auto',
     zIndex: 5,
+    width: 'fit-content',
   },
   middle: {
     flex: 1,
@@ -68,6 +70,8 @@ const MainPage = () => {
   const theme = useTheme();
 
   const desktop = useMediaQuery(theme.breakpoints.up('md'));
+  const query = useQuery();
+  const showDevices = query.get('showDevices');
 
   const mapOnSelect = useAttributePreference('mapOnSelect', true);
 
@@ -86,7 +90,7 @@ const MainPage = () => {
   const [filterSort, setFilterSort] = usePersistedState('filterSort', '');
   const [filterMap, setFilterMap] = usePersistedState('filterMap', false);
 
-  const [devicesOpen, setDevicesOpen] = useState(desktop);
+  const [devicesOpen, setDevicesOpen] = useState(desktop && showDevices);
   const [eventsOpen, setEventsOpen] = useState(false);
 
   const onEventsClick = useCallback(() => setEventsOpen(true), [setEventsOpen]);

@@ -41,7 +41,7 @@ const UserConnectionsPage = () => {
               keyBase="userId"
               keyLink="deviceId"
               titleGetter={(it) => `${it.name} (${it.uniqueId})`}
-              label={t('deviceTitle')}
+              label={t('vehicleTitle')}
             />
             <LinkField
               endpointAll="/api/groups?all=true"
